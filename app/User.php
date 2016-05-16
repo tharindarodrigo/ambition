@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password','phone', 'gender'
     ];
 
     /**
@@ -23,4 +23,50 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function achievements()
+    {
+        return $this->hasMany('App\Achievement');
+    }
+
+    public function educationalGoals()
+    {
+        return $this->hasMany('App\EducationalGoal');
+    }
+
+    public function interests()
+    {
+        return $this->hasMany('App\Interest');
+    }
+
+    public function languages()
+    {
+        return $this->hasMany('App\language');
+    }
+
+    public function livedPlaces()
+    {
+        return $this->hasMany('App\LivedPlace');
+    }
+
+    public function memberships()
+    {
+        return $this->hasMany('App\Membership');
+    }
+
+    public function professionalSkills()
+    {
+        return $this->hasMany('App\ProfessionalSkill');
+    }
+
+    public function schools()
+    {
+        return $this->hasMany('App\School');
+    }
+
+
+
 }

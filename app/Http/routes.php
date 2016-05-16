@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
+Route::get('/', 'HomeController@index');
+Route::post('/user-profile/update', 'HomeController@updateUser');
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');

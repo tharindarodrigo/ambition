@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //toggle `popup` / `inline` mode
     $.fn.editable.defaults.mode = 'popup';
 
@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     //make username editable
     $('#ambition').editable();
-    
+
     $('#hoby').editable({
         type: 'select',
         title: 'Select status',
@@ -26,7 +26,16 @@ $(document).ready(function() {
     $('#Educational-Goals').editable();
 
 
-    $('#birth-date').editable();
+    $('#birth-date').editable({
+        url: 'http://'+window.location.host+'/user-profile/update',
+        pk:1,
+
+        success: function(response, newValue) {
+            if(response.status == 'error') return response.msg; //msg will be shown in editable form
+            userModel.set('username', newValue);
+        }
+
+    });
 
     $('#birth-year').editable();
 
