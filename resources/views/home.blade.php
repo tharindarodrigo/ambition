@@ -396,7 +396,7 @@
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
 //                    userModel.set('username', newValue);
-                },
+                }
 
             });
 
