@@ -312,17 +312,41 @@
                                 <tbody>
                                 <tr>
                                     <td>Degree</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="degree" data-type="textarea" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_degree">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_degree"
+                                                    id="add_degree"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="degree">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Certification</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="certification" data-type="textarea" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_certification">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_certification"
+                                                    id="add_certification"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="certification">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -523,6 +547,15 @@
 
             var lived_place_url = 'http://' + window.location.host + '/ambition/public' + '/user/lived-places';
             superFunction(lived_place_url, 'lived_place', 'lived_place', 'lived_place', 'new_lived_place');
+
+            var degree_url = 'http://' + window.location.host + '/ambition/public' + '/user/degrees';
+            superFunction(degree_url, 'degree', 'degree', 'degree', 'new_degree');
+
+            var certification_url = 'http://' + window.location.host + '/ambition/public' + '/user/certifications';
+            superFunction(certification_url, 'certification', 'certification', 'certification', 'new_certification');
+
+
+
 
             $('#internship').editable();
 

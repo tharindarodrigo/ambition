@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->boolean('gender'); // Male: 1 | Female: 0
             $table->string('phone');
             $table->string('social_media');
+            $table->string('ambition');
             $table->string('address');
 
             $table->rememberToken();
