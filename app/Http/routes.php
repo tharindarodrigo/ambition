@@ -46,6 +46,15 @@ Route::post('/user/languages/store', 'LanguagesController@createLanguage');
 Route::post('/user/languages/delete', 'LanguagesController@deleteLanguage');
 Route::get('/user/languages/get', 'LanguagesController@getLanguages');
 
+Route::post('/user/schools/store', 'SchoolsController@createSchool');
+Route::post('/user/schools/delete', 'SchoolsController@deleteSchool');
+Route::get('/user/schools/get', 'SchoolsController@getSchools');
+
+
+Route::post('/user/lived-places/store', 'LivedPlacesController@createLivedPlace');
+Route::post('/user/lived-places/delete', 'LivedPlacesController@deleteLivedPlace');
+Route::get('/user/lived-places/get', 'LivedPlacesController@getLivedPlaces');
+
 Route::post('/user/degrees/store', 'DegreesController@createDegree');
 Route::post('/user/degrees/delete', 'DegreesController@deleteDegree');
 Route::get('/user/degrees/get', 'DegreesController@getDegrees');
