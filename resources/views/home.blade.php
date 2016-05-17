@@ -235,10 +235,22 @@
                                 </tr>
                                 <tr>
                                     <td>Lived Places</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="lived-places" data-type="textarea" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_lived_place">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_lived_place"
+                                                    id="add_lived_place"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="lived_place">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -458,10 +470,10 @@
                 ]
 
             });
-
-            $('#schools').editable();
-
-            $('#lived-places').editable();
+//
+//            $('#schools').editable();
+//
+//            $('#lived-places').editable();
 
             $('#phone').editable({
                 url: 'http://' + window.location.host + '/ambition/public' + '/user-profile/update',
@@ -522,6 +534,9 @@
 
             var school_url = 'http://' + window.location.host + '/ambition/public' + '/user/schools';
             superFunction(school_url, 'school', 'school', 'school', 'new_school');
+
+            var lived_place_url = 'http://' + window.location.host + '/ambition/public' + '/user/lived_places';
+            superFunction(lived_place_url, 'lived_place', 'lived_place', 'lived_place', 'new_lived_place');
 
             $('#internship').editable();
 

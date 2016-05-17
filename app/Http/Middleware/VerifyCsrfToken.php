@@ -41,6 +41,9 @@ class VerifyCsrfToken extends BaseVerifier
         'user/schools/store',
         'user/schools/delete',
 
+        'user/lived-places/store',
+        'user/lived-places/delete',
+
 
     ];
 }
