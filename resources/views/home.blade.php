@@ -118,7 +118,8 @@
                                                        id="new_educational_goal">
                                             </div>
 
-                                            <button class="btn btn-sm btn-primary new_educational_goal" id="add_educational_goal"><span
+                                            <button class="btn btn-sm btn-primary new_educational_goal"
+                                                    id="add_educational_goal"><span
                                                         class="fa fa-plus"></span></button>
                                         </div>
                                         <div id="educational_goal">
@@ -177,7 +178,7 @@
                                             </div>
 
                                             <button class="btn btn-sm btn-primary new_membership"
-                                                    id="add_employment"><span
+                                                    id="add_membership"><span
                                                         class="fa fa-plus"></span></button>
                                         </div>
                                         <div id="membership">
@@ -188,10 +189,23 @@
                                 </tr>
                                 <tr>
                                     <td>Professional Skills</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           data-type="textarea" id="professional-skills" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_professional_skill">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_professional_skill"
+                                                    id="add_professional_skill"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="professional_skill">
+
+                                        </div>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Languages</td>
@@ -416,7 +430,7 @@
 
 //            $('#membership').editable();
 
-            $('#professional-skills').editable();
+//            $('#professional-skills').editable();
 
             $('#languages').editable({
                 type: 'select',
@@ -490,6 +504,9 @@
 
             var educational_goal_url = 'http://' + window.location.host + '/ambition/public' + '/user/educational-goals';
             superFunction(educational_goal_url, 'educational_goal', 'educational_goal', 'educational_goal', 'new_educational_goal');
+
+            var professional_skill_url = 'http://' + window.location.host + '/ambition/public' + '/user/professional-skills';
+            superFunction(professional_skill_url, 'professional_skill', 'professional_skill', 'professional_skill', 'new_professional_skill');
 
 
             $('#internship').editable();

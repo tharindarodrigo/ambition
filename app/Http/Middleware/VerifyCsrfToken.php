@@ -29,6 +29,12 @@ class VerifyCsrfToken extends BaseVerifier
         'user/educational-goals/store',
         'user/educational-goals/delete',
 
+        'user/educational-goals/store',
+        'user/educational-goals/delete',
+
+        'user/professional-skills/store',
+        'user/professional-skills/delete',
+
 
     ];
 }
