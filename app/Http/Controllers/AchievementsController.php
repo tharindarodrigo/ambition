@@ -13,7 +13,7 @@ class AchievementsController extends Controller
     public function createInterest(Request $request)
     {
         $achievement = new Achievement();
-        $achievement->interest = $request->get('achievement');
+        $achievement->achievement = $request->get('achievement');
         $achievement->users_id = Auth::user()->id;
 
         if ($achievement->save()) {
