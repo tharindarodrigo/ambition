@@ -35,6 +35,12 @@ Route::post('/user/achievements/store', 'AchievementsController@createAchievemen
 Route::post('/user/achievements/delete', 'AchievementsController@deleteAchievement');
 Route::get('/user/achievements/get', 'AchievementsController@getAchievements');
 
+Route::post('/user/educational-goals/store', 'EducationalGoalsController@createEducationalGoal');
+Route::post('/user/educational-goals/delete', 'EducationalGoalsController@deleteEducationalGoal');
+Route::get('/user/educational-goals/get', 'EducationalGoalsController@getEducationalGoals');
+
+
+
 
 Route::auth();
 

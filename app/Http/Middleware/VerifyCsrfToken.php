@@ -24,7 +24,11 @@ class VerifyCsrfToken extends BaseVerifier
         'user/memberships/delete',
 
         'user/achievements/store',
-        'user/achievements/delete'
+        'user/achievements/delete',
+
+        'user/educational-goals/store',
+        'user/educational-goals/delete',
+
 
     ];
 }

@@ -88,20 +88,43 @@
                                         <div id="interest">
 
                                         </div>
-
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Achievements</td>
-                                    <td><a href="#" class="myeditable editable editable-click editable-empty"
-                                           id="achievements" data-type="text" data-name="dob"
-                                           data-original-title="Select Date of birth">Change me</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_achievement">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_achievement" id="add_achievement"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="achievement">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Educational Goals</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="Educational-Goals" data-type="textarea" data-name="comments"
-                                           data-original-title="Enter comments">Change me</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_educational_goal">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_educational_goal" id="add_educational_goal"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="educational_goal">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -294,51 +317,34 @@
                                                 class="fa fa-plus"></span></button>
                                 </div>
                                 <div id="employment">
-                            <td>
-                                <div class="form-group">
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
-                                        border-top:none; border-right:none;border-left:none; background: inherit"
-                                               id="new_employment">
-                                    </div>
-
-                                    <button class="btn btn-sm btn-primary new_employment" id="add_employment"><span
-                                                class="fa fa-plus"></span></button>
-                                </div>
-                                <div id="employment">
-
                                 </div>
 
-                            </td>
+                        </tr>
+                        <tr>
+                            <td> Internship</td>
+                            <td><a href="#"
+                                   class="myeditable editable editable-pre-wrapped editable-click editable-empty"
+                                   id="internship" data-type="textarea" data-name="comments"
+                                   data-original-title="Enter comments">Empty</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                 </div>
-
-                </td>
-                </tr>
-                <tr>
-                    <td> Internship</td>
-                    <td><a href="#"
-                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                           id="internship" data-type="textarea" data-name="comments"
-                           data-original-title="Enter comments">Empty</a></td>
-                </tr>
-                </tbody>
-                </table>
-
             </div>
+
+            <div class="tab-pane " id="project">
+
+                <div class="tab-pane " id="honors-wards">
+                    <div class="tab-pane " id="volunteer-experience">
+
+                    </div>
+
+                </div> <!-- end tab content -->
+
+            </div> <!-- end col-md-8 -->
+
         </div>
-
-        <div class="tab-pane " id="project">
-
-            <div class="tab-pane " id="honors-wards">
-                <div class="tab-pane " id="volunteer-experience">
-
-                </div>
-
-            </div> <!-- end tab content -->
-
-        </div> <!-- end col-md-8 -->
-
-    </div>
 
     </div>
 @endsection
@@ -373,7 +379,7 @@
 
             });
 
-            $('#achievements').editable();
+//            $('#achievements').editable();
 
 
             $('#Educational-Goals').editable();
@@ -481,6 +487,9 @@
 
             var achievement_url = 'http://' + window.location.host + '/ambition/public' + '/user/achievements';
             superFunction(achievement_url, 'achievement', 'achievement', 'achievement', 'new_achievement');
+
+            var educational_goal_url = 'http://' + window.location.host + '/ambition/public' + '/user/educational_goals';
+            superFunction(educational_goal_url, 'educational_goal', 'educational_goal', 'educational_goal', 'new_educational_goal');
 
 
             $('#internship').editable();
