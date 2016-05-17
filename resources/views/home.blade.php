@@ -142,23 +142,7 @@
                                                 {{--                                           data-url="{{ url('user-profile/update') }}" data-pk="{{$user->id}}"--}}
                                            data-original-title="Enter comments">{{$user->dob}}</a></td>
                                 </tr>
-                                <tr>
-                                    <td>Birth Year</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="birth-year" data-type="text" data-name="comments"
-                                           data-url="{{ url('user-profile/update') }}"
 
-                                           data-original-title="Enter comments">{{ $user->first_name }}</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Age</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           data-type="text" id="age" data-name="comments"
-                                           data-url="{{ url('user-profile/update') }}"
-                                           data-original-title="Enter comments">{{ $user->dob }}</a></td>
-                                </tr>
                                 <tr>
                                     <td>Gender</td>
                                     <td><a href="#"
