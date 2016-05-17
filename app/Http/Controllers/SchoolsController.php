@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 
-class SchoolsControllerController extends Controller
+class SchoolsController extends Controller
 {
     public function createSchool(Request $request)
     {
