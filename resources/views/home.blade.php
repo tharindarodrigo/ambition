@@ -216,10 +216,22 @@
                                 </tr>
                                 <tr>
                                     <td>Schools</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="schools" data-type="textarea" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_school">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_school"
+                                                    id="add_school"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="school">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Lived Places</td>
@@ -507,6 +519,9 @@
 
             var professional_skill_url = 'http://' + window.location.host + '/ambition/public' + '/user/professional-skills';
             superFunction(professional_skill_url, 'professional_skill', 'professional_skill', 'professional_skill', 'new_professional_skill');
+
+            var school_url = 'http://' + window.location.host + '/ambition/public' + '/user/schools';
+            superFunction(school_url, 'school', 'school', 'school', 'new_school');
 
             $('#internship').editable();
 
