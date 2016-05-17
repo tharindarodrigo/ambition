@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::find(1);
+        $user = User::find(Auth::id());
         return view('home')->with(['user' => $user]);
     }
 
@@ -40,8 +40,6 @@ class HomeController extends Controller
             $request->get('name') => (String)$request->get('value')
         ];
 
-        $d = explode(PHP_EOL, (String)$request->get('value'));
-        dd($d);
 
         if (User::where('id', Auth::id())->update($data)) {
             return response('success');
