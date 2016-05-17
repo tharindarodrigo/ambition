@@ -6,24 +6,25 @@ use App\ProfessionalSkill;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class ProfessionalSkillsController extends Controller
 {
     public function createProfessionalSkill(Request $request)
     {
-        $educational_goal = new ProfessionalSkill();
-        $educational_goal->educational_goal = $request->get('educational_goal');
-        $educational_goal->users_id = Auth::user()->id;
+        $professional_skill = new ProfessionalSkill();
+        $professional_skill->professional_skill = $request->get('professional_skill');
+        $professional_skill->users_id = Auth::user()->id;
 
-        if ($educational_goal->save()) {
+        if ($professional_skill->save()) {
             return $this->getProfessionalSkills();
         }
     }
 
     public function getProfessionalSkills()
     {
-        $educational_goal = ProfessionalSkill::where('users_id', Auth::id())->get();
-        return response($educational_goal);
+        $professional_skill = ProfessionalSkill::where('users_id', Auth::id())->get();
+        return response($professional_skill);
     }
 
     public function deleteProfessionalSkill(Request $request)
