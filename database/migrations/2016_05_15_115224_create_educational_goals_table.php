@@ -15,8 +15,8 @@ class CreateEducationalGoalsTable extends Migration
         Schema::create('educational_goals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('educational_goal');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

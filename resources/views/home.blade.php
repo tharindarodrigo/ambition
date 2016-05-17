@@ -74,10 +74,21 @@
                                 </tr>
                                 <tr>
                                     <td>Interest / Hobby</td>
-                                    <td><a href="#" class="myeditable editable editable-click editable-empty"
-                                           id="hoby" data-type="checklist" data-name="group"
-                                           data-source="/groups" data-original-title="Select group">Change
-                                            me</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_interest">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_interest" id="add_interest"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="interest">
+
+                                        </div>
+
                                 </tr>
                                 <tr>
                                     <td>Achievements</td>
@@ -243,7 +254,6 @@
                                            id="certification" data-type="textarea" data-name="comments"
                                            data-original-title="Enter comments">Empty</a></td>
                                 </tr>
-
                                 </tbody>
                             </table>
 
@@ -259,10 +269,22 @@
                         <tbody>
                         <tr>
                             <td>Employment</td>
-                            <td><a href="#"
-                                   class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                   id="employment" data-type="textarea" data-name="comments"
-                                   data-original-title="Enter comments">Empty</a></td>
+                            <td>
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                               id="new_employment">
+                                    </div>
+
+                                    <button class="btn btn-sm btn-primary new_employment" id="add_employment"><span
+                                                class="fa fa-plus"></span></button>
+                                </div>
+                                <div id="employment">
+
+                                </div>
+
+                            </td>
                         </tr>
                         <tr>
                             <td> Internship</td>
@@ -294,6 +316,8 @@
 @endsection
 
 @section('scripts')
+    <script src="{{ asset('assets/js/ajax-functions.js') }}" type="text/javascript"></script>
+
     <script type="text/javascript">
         {{--$.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });--}}
         $(document).ready(function () {
@@ -413,7 +437,22 @@
 
             $('#certification').editable();
 
-            $('#employment').editable();
+//            $('#employment').editable();
+
+            /**
+             * Employment Details
+             */
+            var employment_url = 'http://' + window.location.host + '/user/employment';
+            superFunction(employment_url, 'employment', 'employment', 'employment', 'new_employment');
+
+            var interests_url = 'http://' + window.location.host + '/user/interests';
+            superFunction(interests_url, 'interest', 'interest', 'interest', 'new_interest');
+/*
+Membership Details
+ */
+            var memebership_url = 'http://' + window.location.host + '/user/memberships';
+            superFunction(memebership_url, 'membership', 'membership', 'membership', 'new_membership');
+
 
             $('#internship').editable();
 

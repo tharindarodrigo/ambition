@@ -4,11 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Interest extends Model
+class Employment extends Model
 {
-
-    protected $fillable = ['users_id', 'interest'];
-
+    protected $fillable = ['users_id', 'employment'];
 
     public function user()
     {

@@ -40,10 +40,10 @@ class HomeController extends Controller
             $request->get('name') => (String)$request->get('value')
         ];
 
-        dd(print_r(explode(' ',$request->get('value'))));
+        $d = explode(PHP_EOL, (String)$request->get('value'));
+        dd($d);
 
-
-        if (User::where('id',Auth::id())->update($data)) {
+        if (User::where('id', Auth::id())->update($data)) {
             return response('success');
         }
     }

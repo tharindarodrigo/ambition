@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'email', 'password','phone', 'gender'
+        'first_name', 'last_name', 'email', 'password', 'phone', 'gender'
     ];
 
     /**
@@ -67,6 +67,10 @@ class User extends Authenticatable
         return $this->hasMany('App\School');
     }
 
+    public function employments()
+    {
+        return $this->hasMany('App\Employment');
+    }
 
 
 }

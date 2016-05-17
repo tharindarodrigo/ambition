@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLivedPlacesTable extends Migration
+class CreateEmploymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,13 @@ class CreateLivedPlacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lived_places', function (Blueprint $table) {
+        Schema::create('employments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('lived_place');
             $table->integer('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->string('employment');
             $table->timestamps();
+
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateLivedPlacesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('lived_places');
+        Schema::drop('employments');
     }
 }

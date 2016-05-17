@@ -15,8 +15,8 @@ class CreateProfessionalSkillsTable extends Migration
         Schema::create('professional_skills', function (Blueprint $table) {
             $table->increments('id');
             $table->string('professional_skill');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
