@@ -508,7 +508,6 @@
             var professional_skill_url = 'http://' + window.location.host + '/ambition/public' + '/user/professional-skills';
             superFunction(professional_skill_url, 'professional_skill', 'professional_skill', 'professional_skill', 'new_professional_skill');
 
-
             $('#internship').editable();
 
         });

@@ -39,9 +39,9 @@ Route::post('/user/educational-goals/store', 'EducationalGoalsController@createE
 Route::post('/user/educational-goals/delete', 'EducationalGoalsController@deleteEducationalGoal');
 Route::get('/user/educational-goals/get', 'EducationalGoalsController@getEducationalGoals');
 
-Route::post('/user/professional-skills/store', 'EducationalGoalsController@createEducationalGoal');
-Route::post('/user/professional-skills/delete', 'EducationalGoalsController@deleteEducationalGoal');
-Route::get('/user/professional-skills/get', 'EducationalGoalsController@getEducationalGoals');
+Route::post('/user/professional-skills/store', 'ProfessionalSkillsController@createProfessionalSkill');
+Route::post('/user/professional-skills/delete', 'ProfessionalSkillsController@deleteProfessionalSkill');
+Route::get('/user/professional-skills/get', 'ProfessionalSkillsController@getProfessionalSkill');
 
 
 
