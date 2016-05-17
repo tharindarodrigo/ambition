@@ -488,7 +488,7 @@
             var achievement_url = 'http://' + window.location.host + '/ambition/public' + '/user/achievements';
             superFunction(achievement_url, 'achievement', 'achievement', 'achievement', 'new_achievement');
 
-            var educational_goal_url = 'http://' + window.location.host + '/ambition/public' + '/user/educational_goals';
+            var educational_goal_url = 'http://' + window.location.host + '/ambition/public' + '/user/educational-goals';
             superFunction(educational_goal_url, 'educational_goal', 'educational_goal', 'educational_goal', 'new_educational_goal');
 
 
