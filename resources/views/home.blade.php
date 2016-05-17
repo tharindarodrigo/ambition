@@ -353,7 +353,7 @@
 
             $('#birth-date').editable({
 
-                url: 'http://' + window.location.host + '/user-profile/update',
+                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -375,7 +375,7 @@
                     {value: 1, text: 'Male'},
                     {value: 0, text: 'Female'},
                 ],
-                url: 'http://' + window.location.host + '/user-profile/update',
+                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
                 pk: 1,
 
             });
@@ -404,7 +404,7 @@
             $('#lived-places').editable();
 
             $('#phone').editable({
-                url: 'http://' + window.location.host + '/user-profile/update',
+                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -415,7 +415,7 @@
             $('#email').editable();
 
             $('#social-media').editable({
-                url: 'http://' + window.location.host + '/user-profile/update',
+                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -425,7 +425,7 @@
             });
 
             $('#address').editable({
-                url: 'http://' + window.location.host + '/user-profile/update',
+                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -442,15 +442,15 @@
             /**
              * Employment Details
              */
-            var employment_url = 'http://' + window.location.host + '/user/employment';
+            var employment_url = 'http://' + window.location.host +'/ambition/public/' + '/user/employment';
             superFunction(employment_url, 'employment', 'employment', 'employment', 'new_employment');
 
-            var interests_url = 'http://' + window.location.host + '/user/interests';
+            var interests_url = 'http://' + window.location.host +'/ambition/public/' + '/user/interests';
             superFunction(interests_url, 'interest', 'interest', 'interest', 'new_interest');
 /*
 Membership Details
  */
-            var memebership_url = 'http://' + window.location.host + '/user/memberships';
+            var memebership_url = 'http://' + window.location.host +'/ambition/public/' + '/user/memberships';
             superFunction(memebership_url, 'membership', 'membership', 'membership', 'new_membership');
 
 
