@@ -145,10 +145,23 @@
                                 </tr>
                                 <tr>
                                     <td>Memberships</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           data-type="textarea" id="membership" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_membership">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_membership"
+                                                    id="add_employment"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="membership">
+
+                                        </div>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Professional Skills</td>
@@ -281,36 +294,51 @@
                                                 class="fa fa-plus"></span></button>
                                 </div>
                                 <div id="employment">
+                            <td>
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                               id="new_employment">
+                                    </div>
+
+                                    <button class="btn btn-sm btn-primary new_employment" id="add_employment"><span
+                                                class="fa fa-plus"></span></button>
+                                </div>
+                                <div id="employment">
 
                                 </div>
 
                             </td>
-                        </tr>
-                        <tr>
-                            <td> Internship</td>
-                            <td><a href="#"
-                                   class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                   id="internship" data-type="textarea" data-name="comments"
-                                   data-original-title="Enter comments">Empty</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                </div>
+
+                </td>
+                </tr>
+                <tr>
+                    <td> Internship</td>
+                    <td><a href="#"
+                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
+                           id="internship" data-type="textarea" data-name="comments"
+                           data-original-title="Enter comments">Empty</a></td>
+                </tr>
+                </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="tab-pane " id="project">
+
+            <div class="tab-pane " id="honors-wards">
+                <div class="tab-pane " id="volunteer-experience">
 
                 </div>
-            </div>
 
-            <div class="tab-pane " id="project">
+            </div> <!-- end tab content -->
 
-                <div class="tab-pane " id="honors-wards">
-                    <div class="tab-pane " id="volunteer-experience">
+        </div> <!-- end col-md-8 -->
 
-                    </div>
-
-                </div> <!-- end tab content -->
-
-            </div> <!-- end col-md-8 -->
-
-        </div>
+    </div>
 
     </div>
 @endsection
@@ -353,7 +381,7 @@
 
             $('#birth-date').editable({
 
-                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
+                url: 'http://' + window.location.host + '/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -375,12 +403,12 @@
                     {value: 1, text: 'Male'},
                     {value: 0, text: 'Female'},
                 ],
-                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
+                url: 'http://' + window.location.host + '/ambition/public/' + '/user-profile/update',
                 pk: 1,
 
             });
 
-            $('#membership').editable();
+//            $('#membership').editable();
 
             $('#professional-skills').editable();
 
@@ -404,7 +432,7 @@
             $('#lived-places').editable();
 
             $('#phone').editable({
-                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
+                url: 'http://' + window.location.host + '/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -415,7 +443,7 @@
             $('#email').editable();
 
             $('#social-media').editable({
-                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
+                url: 'http://' + window.location.host + '/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -425,7 +453,7 @@
             });
 
             $('#address').editable({
-                url: 'http://' + window.location.host +'/ambition/public/' + '/user-profile/update',
+                url: 'http://' + window.location.host + '/ambition/public/' + '/user-profile/update',
                 pk: 1,
                 success: function (response, newValue) {
                     if (response.status == 'error') return response.msg; //msg will be shown in editable form
@@ -442,16 +470,17 @@
             /**
              * Employment Details
              */
-            var employment_url = 'http://' + window.location.host +'/ambition/public/' + '/user/employment';
+            var employment_url = 'http://' + window.location.host + '/ambition/public/' + '/user/employment';
             superFunction(employment_url, 'employment', 'employment', 'employment', 'new_employment');
 
-            var interests_url = 'http://' + window.location.host +'/ambition/public/' + '/user/interests';
+            var interests_url = 'http://' + window.location.host + '/ambition/public/' + '/user/interests';
             superFunction(interests_url, 'interest', 'interest', 'interest', 'new_interest');
-/*
-Membership Details
- */
-            var memebership_url = 'http://' + window.location.host +'/ambition/public/' + '/user/memberships';
-            superFunction(memebership_url, 'membership', 'membership', 'membership', 'new_membership');
+
+            var membership_url = 'http://' + window.location.host + '/ambition/public/' + '/user/memberships';
+            superFunction(membership_url, 'membership', 'membership', 'membership', 'new_membership');
+
+            var achievement_url = 'http://' + window.location.host + '/ambition/public/' + '/user/achievements';
+            superFunction(achievement_url, 'achievement', 'achievement', 'achievement', 'new_achievement');
 
 
             $('#internship').editable();

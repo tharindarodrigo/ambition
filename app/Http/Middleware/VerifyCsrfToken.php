@@ -23,6 +23,8 @@ class VerifyCsrfToken extends BaseVerifier
         'user/memberships/store',
         'user/memberships/delete',
 
+        'user/achievements/store',
+        'user/achievements/delete'
 
     ];
 }

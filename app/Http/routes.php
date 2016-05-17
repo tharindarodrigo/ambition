@@ -31,6 +31,10 @@ Route::get('/user/memberships/get', 'MembershipsController@getMemberships');
 Route::post('/user/memberships/delete', 'MembershipsController@deleteMembership');
 
 
+Route::post('/user/achievements/store', 'MembershipsController@createAchievement');
+Route::post('/user/achievements/delete', 'MembershipsController@deleteAchievement');
+Route::get('/user/achievements/get', 'MembershipsController@getAchievements');
+
 
 Route::auth();
 
