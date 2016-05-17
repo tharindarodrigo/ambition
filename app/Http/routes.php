@@ -51,6 +51,7 @@ Route::post('/user/schools/store', 'SchoolsController@createSchool');
 Route::post('/user/schools/delete', 'SchoolsController@deleteSchool');
 Route::get('/user/schools/get', 'SchoolsController@getSchools');
 
+
 Route::post('/user/lived-places/store', 'LivedPlacesController@createLivedPlace');
 Route::post('/user/lived-places/delete', 'LivedPlacesController@deleteLivedPlace');
 Route::get('/user/lived-places/get', 'LivedPlacesController@getLivedPlaces');

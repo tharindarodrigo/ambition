@@ -209,10 +209,22 @@
                                 </tr>
                                 <tr>
                                     <td>Languages</td>
-                                    <td><a href="#"
-                                           class="myeditable editable editable-pre-wrapped editable-click editable-empty"
-                                           id="languages" data-type="checklist" data-name="comments"
-                                           data-original-title="Enter comments">Empty</a></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control small" style="border-bottom: #0000cc dashed thin;
+                                        border-top:none; border-right:none;border-left:none; background: inherit"
+                                                       id="new_language">
+                                            </div>
+
+                                            <button class="btn btn-sm btn-primary new_language"
+                                                    id="add_language"><span
+                                                        class="fa fa-plus"></span></button>
+                                        </div>
+                                        <div id="language">
+
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Schools</td>
@@ -456,20 +468,7 @@
 
 //            $('#professional-skills').editable();
 
-            $('#languages').editable({
-                type: 'select',
-                title: 'Select status',
-                placement: 'right',
-                value: 1,
-                source: [
-                    {value: 1, text: 'Sinhala'},
-                    {value: 2, text: 'Tamil'},
-                    {value: 2, text: 'English'},
 
-
-                ]
-
-            });
 //
 //            $('#schools').editable();
 //
@@ -534,6 +533,9 @@
 
             var school_url = 'http://' + window.location.host + '/ambition/public' + '/user/schools';
             superFunction(school_url, 'school', 'school', 'school', 'new_school');
+
+            var language_url = 'http://' + window.location.host + '/ambition/public' + '/user/languages';
+            superFunction(language_url, 'language', 'language', 'language', 'new_language');
 
             var lived_place_url = 'http://' + window.location.host + '/ambition/public' + '/user/lived-places';
             superFunction(lived_place_url, 'lived_place', 'lived_place', 'lived_place', 'new_lived_place');

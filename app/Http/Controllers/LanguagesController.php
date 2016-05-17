@@ -6,24 +6,25 @@ use App\Language;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class LanguagesController extends Controller
 {
     public function createLanguage(Request $request)
     {
-        $professional_skill = new Language();
-        $professional_skill->professional_skill = $request->get('professional_skill');
-        $professional_skill->users_id = Auth::user()->id;
+        $language = new Language();
+        $language->language = $request->get('language');
+        $language->users_id = Auth::user()->id;
 
-        if ($professional_skill->save()) {
+        if ($language->save()) {
             return $this->getLanguages();
         }
     }
 
     public function getLanguages()
     {
-        $professional_skill = Language::where('users_id', Auth::id())->get();
-        return response($professional_skill);
+        $language = Language::where('users_id', Auth::id())->get();
+        return response($language);
     }
 
     public function deleteLanguage(Request $request)
