@@ -535,7 +535,7 @@
             var school_url = 'http://' + window.location.host + '/ambition/public' + '/user/schools';
             superFunction(school_url, 'school', 'school', 'school', 'new_school');
 
-            var lived_place_url = 'http://' + window.location.host + '/ambition/public' + '/user/lived_places';
+            var lived_place_url = 'http://' + window.location.host + '/ambition/public' + '/user/lived-places';
             superFunction(lived_place_url, 'lived_place', 'lived_place', 'lived_place', 'new_lived_place');
 
             $('#internship').editable();
