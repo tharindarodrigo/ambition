@@ -19,17 +19,16 @@ Route::post('/user-profile/update', 'HomeController@updateUser');
 
 
 Route::post('/user/employment/store', 'EmploymentsController@createEmployment');
-Route::get('/user/employment/get', 'EmploymentsController@getEmployments');
 Route::post('/user/employment/delete', 'EmploymentsController@deleteEmployment');
+Route::get('/user/employment/get', 'EmploymentsController@getEmployments');
 
 Route::post('/user/interests/store', 'InterestsController@createInterest');
-Route::get('/user/interests/get', 'InterestsController@getInterests');
 Route::post('/user/interests/delete', 'InterestsController@deleteInterest');
+Route::get('/user/interests/get', 'InterestsController@getInterests');
 
 Route::post('/user/memberships/store', 'MembershipsController@createMembership');
 Route::get('/user/memberships/get', 'MembershipsController@getMemberships');
 Route::post('/user/memberships/delete', 'MembershipsController@deleteMembership');
-
 
 Route::post('/user/achievements/store', 'AchievementsController@createAchievement');
 Route::post('/user/achievements/delete', 'AchievementsController@deleteAchievement');
@@ -45,7 +44,7 @@ Route::get('/user/professional-skills/get', 'ProfessionalSkillsController@getPro
 
 Route::post('/user/languages/store', 'LanguagesController@createLanguage');
 Route::post('/user/languages/delete', 'LanguagesController@deleteLanguage');
-Route::get('/user/languages/get', 'LanguagesController@getLanguage');
+Route::get('/user/languages/get', 'LanguagesController@getLanguages');
 
 Route::post('/user/schools/store', 'SchoolsController@createSchool');
 Route::post('/user/schools/delete', 'SchoolsController@deleteSchool');
