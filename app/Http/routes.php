@@ -41,7 +41,15 @@ Route::get('/user/educational-goals/get', 'EducationalGoalsController@getEducati
 
 Route::post('/user/professional-skills/store', 'ProfessionalSkillsController@createProfessionalSkill');
 Route::post('/user/professional-skills/delete', 'ProfessionalSkillsController@deleteProfessionalSkill');
-Route::get('/user/professional-skills/get', 'ProfessionalSkillsController@getProfessionalSkill');
+Route::get('/user/professional-skills/get', 'ProfessionalSkillsController@getProfessionalSkills');
+
+Route::post('/user/languages/store', 'LanguagesController@createLanguage');
+Route::post('/user/languages/delete', 'LanguagesController@deleteLanguage');
+Route::get('/user/languages/get', 'LanguagesController@getLanguage');
+
+Route::post('/user/schools/store', 'SchoolsController@createSchool');
+Route::post('/user/schools/delete', 'SchoolsController@deleteSchool');
+Route::get('/user/schools/get', 'SchoolsController@getLanSchool');
 
 
 

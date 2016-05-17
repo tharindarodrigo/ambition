@@ -35,6 +35,12 @@ class VerifyCsrfToken extends BaseVerifier
         'user/professional-skills/store',
         'user/professional-skills/delete',
 
+        'user/languages/store',
+        'user/languages/delete',
+
+        'user/schools/store',
+        'user/schools/delete',
+
 
     ];
 }
