@@ -17,7 +17,7 @@ class AchievementsController extends Controller
         $achievement->users_id = Auth::user()->id;
 
         if ($achievement->save()) {
-            return $this->getInterests();
+            return $this->getAchievements();
         }
     }
 
@@ -30,7 +30,7 @@ class AchievementsController extends Controller
     public function deleteAchievement(Request $request)
     {
         if (Achievement::where('id', $request->get('id'))->where('users_id', Auth::id())->delete()) {
-            return $this->getInterests();
+            return $this->getAchievements();
         }
     }
 }
