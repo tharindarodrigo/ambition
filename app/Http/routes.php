@@ -49,7 +49,7 @@ Route::get('/user/languages/get', 'LanguagesController@getLanguage');
 
 Route::post('/user/schools/store', 'SchoolsController@createSchool');
 Route::post('/user/schools/delete', 'SchoolsController@deleteSchool');
-Route::get('/user/schools/get', 'SchoolsController@getLanSchool');
+Route::get('/user/schools/get', 'SchoolsController@getSchools');
 
 
 
