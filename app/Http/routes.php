@@ -53,6 +53,5 @@ Route::get('/user/schools/get', 'SchoolsController@getSchools');
 
 
 
-
 Route::auth();
 
