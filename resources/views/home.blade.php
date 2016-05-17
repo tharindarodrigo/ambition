@@ -512,10 +512,6 @@
                 }
             });
 
-            $('#degree').editable();
-
-            $('#certification').editable();
-
 //            $('#employment').editable();
 
             /**
