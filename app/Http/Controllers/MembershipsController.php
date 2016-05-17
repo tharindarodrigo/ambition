@@ -13,11 +13,11 @@ class MembershipsController extends Controller
     public function createMembership(Request $request)
     {
         $membership = new Membership();
-        $membership->interest = $request->get('membership');
+        $membership->membership = $request->get('membership');
         $membership->users_id = Auth::user()->id;
 
         if ($membership->save()) {
-            return $this->getInterests();
+            return $this->getMemberships();
         }
     }
 
