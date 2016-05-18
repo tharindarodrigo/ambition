@@ -552,7 +552,6 @@
 
 
 
-
             $('#internship').editable();
 
         });
